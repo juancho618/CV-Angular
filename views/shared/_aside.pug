@@ -1,0 +1,18 @@
+md-sidenav(md-is-locked-open='true', class="aside", layout='column', flex='grow', ng-class="!menuExpand ? 'aside-small' : ''")
+    div.aside-img-container(layout='row')
+        div(ng-class="menuExpand ? 'circular' : 'circular-small'")
+    div.site-title(layout='row', layout-align='center center', ng-if="menuExpand")
+        h3 Juan Jose Soriano    
+    div(layout='row')    
+        div(layout='column', flex)            
+            md-button.md-primary.menu-button(ng-repeat='item in menuButtons', ng-class="menuExpand ? 'menu-button' : 'menu-button-small'", ng-click="go(item)")
+                i(class=`{{item.icon}}`)
+                span(ng-if='menuExpand') {{item.name}}
+    span(flex)
+    md-divider     
+    div(layout='{{footerLayout}}')
+        md-button.md-primary.footer-button(ng-repeat='item in footerButtons')
+            i(class=`{{item.icon}}`)
+    div(layout='row')
+        md-button.md-primary.footer-button(ng-click='toggleMenu()')
+            i(class='ion-ios-arrow-back', ng-class="menuExpand ? 'ion-ios-arrow-back' : 'ion-ios-arrow-forward'")

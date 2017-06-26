@@ -1,0 +1,14 @@
+{
+  "name": "cv-angular",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node Server.js"
+  },
+  "dependencies": {
+    "angular-animate": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "express": "latest",
+    "pug": "^2.0.0-beta11",
+    "sendgrid": "^5.0.0"
+  }
+}

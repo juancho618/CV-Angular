@@ -1,0 +1,73 @@
+.aside {
+  background-color: #1C262B;
+  height: 100%;
+  color: white;
+  transition: width 600ms ease-out, height 600ms ease-out;
+}
+.aside-small{
+  width: 60px;
+}
+/* Circular image aside menu container */
+.aside-img-container{
+    margin: 10px 0px 10px 0px;
+}
+/* Circular image*/
+.circular{
+  width: 130px;
+	height: 130px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(/static/img/me.png) no-repeat;
+  margin: auto;
+}
+.circular-small{
+  width: 50px;
+	height: 50px;
+	border-radius: 60px;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	background: url(/static/img/me.png) 32% no-repeat;
+  margin: auto;
+  background-size: 56px 56px, auto, 56px;
+
+}
+
+/* site title aside*/
+.site-title{
+  background-color: #2BA163;
+  text-align: center;
+}
+.site-title>h3{
+    margin: 0px;
+}
+
+.menu-button{
+  width: 100%;
+  margin: 0px;
+  text-align: left;
+  padding-left: 10px;
+  color: white !important;
+}
+.menu-button-small{
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+  padding-left: 10px;
+  color: white !important;
+}
+
+.md-button{
+  min-width: 1%;
+  color: white;
+}
+
+
+.footer-button{
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+  padding-left: 10px;
+  color: white !important;
+}
+
