@@ -40,6 +40,31 @@ router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
+route.post('/contact', function (req, res) {
+    console.log(req.body);
+    const from_email = new helper.Email(req.body.email);
+    const to_email = new helper.Email("jjsorianoe@gmail.com");
+    const subject = "Contact Message";
+    const content = new helper.Content("text/plain", req.body.message);
+    const mail = new helper.Mail(from_email, subject, to_email, content);
+
+    const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+    const request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON()
+    });
+
+    sg.API(request, function(error, response) {
+        console.log(response.statusCode);
+        console.log(response.body);
+        console.log(response.headers);
+    })
+    res.end('It worked!');
+});
+
+
+
 app.use('/', router);
 
 app.listen(3000, () => console.log('Running on port 3000'));
