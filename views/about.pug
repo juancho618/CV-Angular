@@ -1,39 +1,39 @@
 extends ./shared/layout.pug
 block content
-    div(ng-controller="aboutCtrl", layout='row')
-        div#aboutImgHeader
-            h1.bgAboutText Web Developer
-        div#resumeBlock(layout='column') 
-            div.resumeContainer.text-center(ng-repeat="item in blockElements")       
-            div.resumeContainer.text-center
+    link(href="/static/css/about.css", rel="stylesheet")
+    div(ng-controller="aboutCtrl", layout='column')
+        div#aboutImgHeader(layout="row", layout-align="center center")
+            h1 Web Developer
+        div.blockElemnts(layout='row') 
+            div(ng-repeat="item in blockElements", flex, layout ='column' layout-align="center center")
                 i(class='{{item.icon}}')
                 h3  {{item.text}}
-        div#descriptionBlock(layout="row")
-            div.container-fluid
-                div.col-md-12.text-center
-                    div.banner About me
-                div.row
-                    div.col-md-9
-                        p I am a devoted developer, maker and innovative person who enjoys developing new features and tools for the good of the people, looking always for efficient and simple solutions usable for everyone.
-                        p I am an Industrial Engineer who found out the web, mobile and system development as an essential tool to improve and facilitate any process. In this way, while I was working as Organizational analyst in a Hospital, I started developing and proposing the new Process Management and Risk Analysis tool for the hospital as a cross department platform where the information was shared in an online community platform where everyone contributing from their roles.
-                        p From this experience working for 3 years in a Hospital, personal projects and thanks to my hunger of knowledge, I decided to start a Master in Applied Computer Science which I am currently doing, polishing my abilities and getting more knowledge from my professors.
-                        p Despite of all this technical skills and work experience, in my free time I like to explore new cities and cultures, go to for a cup of coffee and speak with friends, discover new people, play the guitar and when it is possible I do Scuba diving escaping to deep and infinite Blue world.
+        //- div#descriptionBlock(layout="row")
+        //-     div.container-fluid
+        //-         div.col-md-12.text-center
+        //-             div.banner About me
+        //-         div.row
+        //-             div.col-md-9
+        //-                 p I am a devoted developer, maker and innovative person who enjoys developing new features and tools for the good of the people, looking always for efficient and simple solutions usable for everyone.
+        //-                 p I am an Industrial Engineer who found out the web, mobile and system development as an essential tool to improve and facilitate any process. In this way, while I was working as Organizational analyst in a Hospital, I started developing and proposing the new Process Management and Risk Analysis tool for the hospital as a cross department platform where the information was shared in an online community platform where everyone contributing from their roles.
+        //-                 p From this experience working for 3 years in a Hospital, personal projects and thanks to my hunger of knowledge, I decided to start a Master in Applied Computer Science which I am currently doing, polishing my abilities and getting more knowledge from my professors.
+        //-                 p Despite of all this technical skills and work experience, in my free time I like to explore new cities and cultures, go to for a cup of coffee and speak with friends, discover new people, play the guitar and when it is possible I do Scuba diving escaping to deep and infinite Blue world.
 
-                        blockquote {{fact}}
-                            button.pull-right#RndFactBtn(ng-click="randomFact()") Random Fact!
-                    div.col-md-3.col-divider
-                        div.row
-                            .polygon-each
-                                .polygon-each-img-wrap
-                                    img.polygon-clip-hexagon(src='/static/img/me1.jpg', alt='demo-clip-hexagon')
-                                svg.clip-svg
-                                    defs
-                                        clippath#polygon-clip-hexagon(clippathunits='objectBoundingBox')
-                                            polygon(points='0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25')
-                            //img(src="/static/img/me1.jpg", class='col-header img-responsive', alt="imagen")
-                        div.row.col-content
-                            p Name: Juan Jose Soriano
-                            p Age: 26
-                            p Nationality: Colombian
-                            p Email: jjsorianoe@gmail.com
-                    div.col-md-12
+        //-                 blockquote {{fact}}
+        //-                     button.pull-right#RndFactBtn(ng-click="randomFact()") Random Fact!
+        //-             div.col-md-3.col-divider
+        //-                 div.row
+        //-                     .polygon-each
+        //-                         .polygon-each-img-wrap
+        //-                             img.polygon-clip-hexagon(src='/static/img/me1.jpg', alt='demo-clip-hexagon')
+        //-                         svg.clip-svg
+        //-                             defs
+        //-                                 clippath#polygon-clip-hexagon(clippathunits='objectBoundingBox')
+        //-                                     polygon(points='0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25')
+        //-                     //img(src="/static/img/me1.jpg", class='col-header img-responsive', alt="imagen")
+        //-                 div.row.col-content
+        //-                     p Name: Juan Jose Soriano
+        //-                     p Age: 26
+        //-                     p Nationality: Colombian
+        //-                     p Email: jjsorianoe@gmail.com
+        //-             div.col-md-12

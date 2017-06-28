@@ -1,4 +1,4 @@
-app.controller('asideCtrl', ($scope) => {
+app.controller('asideCtrl', ($scope, $window) => {
     
     $scope.menuExpand = true;
     $scope.footerLayout = 'row';
@@ -17,27 +17,27 @@ app.controller('asideCtrl', ($scope) => {
         {
             'name' : ' Home',
             'icon' : 'ion-ios-home',
-            'action' : 'index'
+            'action' : '/'
         },
         {
              'name' : ' About me',
              'icon' : 'ion-ios-contact',
-             'action' : 'about'
+             'action' : '/about'
         },
         {
              'name' : ' Resume',
              'icon' : 'ion-ios-bookmarks',
-             'action' : 'resume'
+             'action' : '/resume'
         },
         {
             'name' : ' Portfolio',
             'icon' : 'ion-ios-briefcase',
-            'action' : 'portfolio'
+            'action' : '/portfolio'
         },
         {
              'name' : ' Contact',
              'icon' : 'ion-paper-airplane',
-             'action' : 'contact'
+             'action' : '/contact'
         }
     ]
     
@@ -56,5 +56,5 @@ app.controller('asideCtrl', ($scope) => {
     }        
     ]
 
-    $scope.go = (i) => console.log('hola', i);
+    $scope.go = (i) => $window.location.href = i.action;
 })

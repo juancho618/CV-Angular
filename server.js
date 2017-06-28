@@ -40,7 +40,7 @@ router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
-route.post('/contact', function (req, res) {
+router.post('/contact', function (req, res) {
     console.log(req.body);
     const from_email = new helper.Email(req.body.email);
     const to_email = new helper.Email("jjsorianoe@gmail.com");

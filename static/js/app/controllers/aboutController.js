@@ -2,19 +2,19 @@ app.controller('aboutCtrl', ($scope) => {
 
     $scope.blockElements = [
         {
-            'icon' : 'chip',
+            'icon' : 'ion-cube',
             'text' : 'Embedded Systems'
         },
         {
-            'icon' : 'database',
+            'icon' : 'ion-ios-cloud-outline',
             'text' : 'Data Analysis and automation'
         },
         {
-            'icon' : 'android or ionic',
+            'icon' : 'ion-iphone',
             'text' : 'Mobile Apps development'
         },
         {
-            'icon' : 'coffee',
+            'icon' : 'ion-coffee',
             'text' : 'Coffee Lover'
         },
         

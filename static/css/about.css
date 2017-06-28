@@ -1,0 +1,10 @@
+#aboutImgHeader{
+    background-image: url('/static/img/Background.jpg');
+    min-height: 25vh;
+}
+.blockElemnts{
+    min-height: 25vh;
+}
+.blockElemnts  i{
+    font-size: 40px;
+} 
