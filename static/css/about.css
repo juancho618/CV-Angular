@@ -1,10 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
 #aboutImgHeader{
     background-image: url('/static/img/Background.jpg');
-    min-height: 25vh;
+    min-height: 20vh;
+}
+p {
+    text-align: justify;
 }
 .blockElemnts{
-    min-height: 25vh;
+    min-height: 20vh;
+    background-color: #2BA163;
+    color: #fff;
 }
 .blockElemnts  i{
     font-size: 40px;
 } 
+.blockElemnts  h3{
+    text-align: center;
+} 
+.aboutTitle{
+    min-height: 10vh;
+}
+.aboutContent{
+    min-height: 50vh;
+}
+
+/*Banner*/
+.banner {
+    font-family: Lato;
+    z-index: 1;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background: #268d57;
+    position: relative;
+}
+.banner:before,
+.banner:after {
+    z-index: -1;
+    content: "";
+    display: block;
+    top: 5px;
+    position: absolute;
+    border-top: 20px solid #1b653e;
+    border-bottom: 20px solid #1b653e;
+}
+.banner:before {
+    right: 100%;
+    margin-right: 0;
+    border-right: 20px solid #1b653e;
+    border-left: 5px solid transparent;
+}
+.banner:after {
+    left: 100%;
+    margin-left: 0;
+    border-left: 20px solid #1b653e;
+    border-right: 5px solid transparent;
+}
+
+/* Block quote*/
+blockquote{
+    display:block;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+
+    /*Borders - (Optional)*/
+    border-left: 15px solid #2b542c;
+    border-right: 2px solid #2b542c;
+
+    /*Box Shadow - (Optional)*/
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+}
+
+blockquote::after{
+    /*Reset to make sure*/
+    content: "";
+}
+
+blockquote a{
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+}
+
+blockquote a:hover{
+    color: #666;
+}
+
+blockquote em{
+    font-style: italic;
+}
+
+#RndFactBtn{
+    background-color: #2BA163;
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    outline:none;
+}
