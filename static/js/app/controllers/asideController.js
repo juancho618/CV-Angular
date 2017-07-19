@@ -1,7 +1,7 @@
 app.controller('asideCtrl', ($scope, $window) => {
     
-    $scope.menuExpand = true; //TODO: change the value to false as a default value
-    $scope.footerLayout = 'row';
+    $scope.menuExpand = false;
+    $scope.footerLayout = 'column'; // depends on the way that needs to be initialize.
     $scope.btnWith;
     $scope.toggleMenu = () => {
         $scope.menuExpand = !$scope.menuExpand; 
