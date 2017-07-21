@@ -1,0 +1,13 @@
+#contactImgHeader{
+    height: 25vh;
+    background: url("/static/img/map.jpeg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    /* Add Opacity effect*/
+    -khtml-opacity:.50;
+    -moz-opacity:.50;
+    -ms-filter:"alpha(opacity=50)";
+    filter:alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+    opacity:.50;
+}

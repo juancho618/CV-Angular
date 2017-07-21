@@ -139,7 +139,11 @@ blockquote em{
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 25vh;
+}
+
+.polygon-each-img-wrap{
+    margin: 0 auto;
 }
 
 .polygon-clip-hexagon {

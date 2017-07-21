@@ -1,32 +1,15 @@
 extends ./shared/layout.pug
 block content
+    link(rel="styleSheet", href="/static/css/resume.css", type="text/css")
     link(rel="styleSheet", href="/static/css/timeline.css", type="text/css")
-    div#resumeImgHeaders
-        h1.bgAboutText Experience
-    div#stroyLine
+    div#resumeImgHeaders(layout="column", layout-align="center center")
+        h1 Experience
+    div#stroyLine(ng-controller="resumeCtrl as resume", layout="column")
         #timeline
-            .timeline-item
+            .timeline-item(ng-repeat="item in resume.experience")
                 .timeline-icon
-                    i.fa.fa-microchip
-                .timeline-content
-                    h2 MASTER IN APPLIED COMPUTER SCIENCE
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        | Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
-                    a.btn(href='#') button
-            .timeline-item
-                .timeline-icon
-                   i.fa.fa-clock-o
-                .timeline-content.right
-                    h2 STATISTICS AND PROBABILITY PROFESSOR
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.
-                    a.btn(href='#') button
-            .timeline-item
-                .timeline-icon
-                   i.fa.fa-android
-                .timeline-content
-                    h2 WEB DEVELOPER
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.
+                    i(class=`{{item.icon}}`)
+                .timeline-content(ng-class-even="'right'")
+                    h2 {{item.title}}
+                    p  {{item.description}}
                     a.btn(href='#') button

@@ -1,19 +1,19 @@
-app.controller('asideCtrl', ($scope, $window) => {
-    
-    $scope.menuExpand = false;
-    $scope.footerLayout = 'column'; // depends on the way that needs to be initialize.
-    $scope.btnWith;
-    $scope.toggleMenu = () => {
-        $scope.menuExpand = !$scope.menuExpand; 
-        if ($scope.footerLayout == 'row') {
-            $scope.footerLayout = 'column';
-            $scope.btnWith = 'min-width:100%';
+app.controller('asideCtrl', function($window) {
+    let self = this;
+    self.menuExpand = false;
+    self.footerLayout = 'column'; // depends on the way that needs to be initialize.
+    self.btnWith;
+    self.toggleMenu = () => {
+        self.menuExpand = !self.menuExpand; 
+        if (self.footerLayout == 'row') {
+            self.footerLayout = 'column';
+            self.btnWith = 'min-width:100%';
         } else {
-            $scope.footerLayout = 'row'
-            $scope.btnWith = 'min-width:1%';
+            self.footerLayout = 'row'
+            self.btnWith = 'min-width:1%';
         }
     }
-    $scope.menuButtons = [
+    self.menuButtons = [
         {
             'name' : ' Home',
             'icon' : 'ion-ios-home',
@@ -41,7 +41,7 @@ app.controller('asideCtrl', ($scope, $window) => {
         }
     ]
     
-    $scope.footerButtons = [
+    self.footerButtons = [
     {
         'icon' : 'ion-social-facebook',
         'action' : 'fac'
@@ -56,5 +56,5 @@ app.controller('asideCtrl', ($scope, $window) => {
     }        
     ]
 
-    $scope.go = (i) => $window.location.href = i.action;
+    self.go = (i) => $window.location.href = i.action;
 })

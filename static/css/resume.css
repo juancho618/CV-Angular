@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+#resumeImgHeader{
+    background-image: url('/static/img/Background.jpg');
+    min-height: 20vh;
+}

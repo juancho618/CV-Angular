@@ -1,18 +1,18 @@
-md-sidenav(md-is-locked-open='true', class="aside", layout='column', flex='grow', ng-class="!menuExpand ? 'aside-small' : ''")
+md-sidenav(md-is-locked-open='true', class="aside", layout='column', flex='grow', ng-class="!aside.menuExpand ? 'aside-small' : ''")
     div.aside-img-container(layout='row')
-        div(ng-class="menuExpand ? 'circular' : 'circular-small'")
-    div.site-title(layout='row', layout-align='center center', ng-if="menuExpand")
+        div(ng-class="aside.menuExpand ? 'circular' : 'circular-small'")
+    div.site-title(layout='row', layout-align='center center', ng-if="aside.menuExpand")
         h3 Juan Jose Soriano    
     div(layout='row')    
         div(layout='column', flex)            
-            md-button.md-primary.menu-button(ng-repeat='item in menuButtons', ng-class="menuExpand ? 'menu-button' : 'menu-button-small'", ng-click="go(item)")
+            md-button.md-primary.menu-button(ng-repeat='item in aside.menuButtons', ng-class="aside.menuExpand ? 'menu-button' : 'menu-button-small'", ng-click="aside.go(item)")
                 i(class=`{{item.icon}}`)
-                span(ng-if='menuExpand') {{item.name}}
+                span(ng-if='aside.menuExpand') {{item.name}}
     span(flex)
     md-divider     
-    div(layout='{{footerLayout}}')
-        md-button.md-primary.footer-button(ng-repeat='item in footerButtons')
+    div(layout='{{aside.footerLayout}}')
+        md-button.md-primary.footer-button(ng-repeat='item in aside.footerButtons')
             i(class=`{{item.icon}}`)
     div(layout='row')
-        md-button.md-primary.footer-button(ng-click='toggleMenu()')
-            i(class='ion-ios-arrow-back', ng-class="menuExpand ? 'ion-ios-arrow-back' : 'ion-ios-arrow-forward'")
+        md-button.md-primary.footer-button(ng-click='aside.toggleMenu()')
+            i(class='ion-ios-arrow-back', ng-class="aside.menuExpand ? 'ion-ios-arrow-back' : 'ion-ios-arrow-forward'")

@@ -1,6 +1,6 @@
-app.controller('aboutCtrl', ($scope) => {
-
-    $scope.blockElements = [
+app.controller('aboutCtrl', function() {
+    let self = this;
+    self.blockElements = [
         {
             'icon' : 'ion-cube',
             'text' : 'Embedded Systems'
@@ -19,7 +19,7 @@ app.controller('aboutCtrl', ($scope) => {
         },
         
     ]
-    $scope.randomFact =  () => {
+    self.randomFact =  () => {
         const facts =[ "My favorite color is green (as you can notice in my web site 😝)",
             "I named my Dog Pythagoras",
             "I am 1,93 meters tall",
@@ -32,8 +32,8 @@ app.controller('aboutCtrl', ($scope) => {
             "I enjoy sour candies",
             "My favorite coffee method is the Chemex",
             "O.o"];
-        var picked = facts[Math.floor(Math.random()*facts.length)];
-        $scope.fact = picked;
+        const picked = facts[Math.floor(Math.random()*facts.length)];
+        self.fact = picked;
     }
-    $scope.randomFact();
+    self.randomFact();
 })

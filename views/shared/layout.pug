@@ -3,7 +3,7 @@ html(lang="en")
     include ./_head.pug
     body(ng-app="cvAPP", layout='column')
         div(class="container", flex, layout='row')
-            div(ng-controller='asideCtrl')
+            div(ng-controller='asideCtrl as aside')
                 include ./_aside.pug        
             md-content(id="main", flex)
                 block content
@@ -14,6 +14,8 @@ html(lang="en")
         script(src="/static/js/app/app.js")
         script(src="/static/js/app/controllers/asideController.js")
         script(src="/static/js/app/controllers/aboutController.js")
+        script(src="/static/js/app/controllers/resumeController.js")
+        script(src="/static/js/app/controllers/contactController.js")
 
 
 
