@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
 #resumeImgHeader{
-    background-image: url('/static/img/Background.jpg');
     min-height: 20vh;
+    position: relative;
+}
+#imgBackground{
+    background: url("/static/img/exp.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    /* Add Opacity effect*/
+    -khtml-opacity:.50;
+    -moz-opacity:.50;
+    -ms-filter:"alpha(opacity=50)";
+    filter:alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+    opacity:.50;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
 }

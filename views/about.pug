@@ -2,8 +2,9 @@ extends ./shared/layout.pug
 block content
     link(href="/static/css/about.css", rel="stylesheet")
     div(ng-controller="aboutCtrl as about", layout='column')
-        div#aboutImgHeader(layout="row", layout-align="center center")
-            h1 Web Developer
+        div#aboutImgHeader(layout="row")
+            div#imgBackground
+            h1.headerTitle Web Developer
         div.blockElemnts(layout='row') 
             div(ng-repeat="item in about.blockElements", flex, layout ='column' layout-align="center center")
                 i(class='{{item.icon}}')
