@@ -30,6 +30,11 @@ router.get('/portfolio', (req, res) => {
     res.render('portfolio');
 });
 
+router.get('/envelope', (req, res) => {
+    res.render('envelope');
+});
+
+
 router.get('/about', (req, res) => {
     res.render('about');
 });

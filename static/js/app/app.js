@@ -1,1 +1,1 @@
-let app = angular.module("cvAPP", [ 'ngMaterial' ]);
+let app = angular.module("cvAPP", [ 'ngMaterial', 'ngAnimate' ]);
