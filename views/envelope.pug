@@ -1,6 +1,7 @@
 
 link(href='/static/css/envelope.css', rel='stylesheet')   
 link(href="/static/css/animate.css", rel="stylesheet")
+link(href="/angular-material/angular-material.css" rel="stylesheet")
 script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js')
 script(src='/scripts/angular-animate/angular-animate.js')
 script(src='/scripts/angular-aria/angular-aria.js')       
@@ -8,11 +9,32 @@ script(src="/angular-material/angular-material.js")
 script(src="/static/js/app/app.js")
 script(src="/static/js/app/controllers/envelopeController.js")
 div(ng-app="cvAPP", ng-controller='envelopeCtrl as envelope')
+  div(ng-show="envelope.dialog", style="")
+    form(action="")
+      md-card
+        img.md-card-image(ng-src='{{imagePath}}', alt='Washed Out')
+        md-card-title
+          md-card-title-text
+            span.md-headline Action buttons
+        md-card-content
+          p
+            | The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            | two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          p
+            | The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            | two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          p
+            | The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            | two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+        md-card-actions(layout='row', layout-align='end center')
+          md-button Action 1
+          md-button Action 2
+
   div#envelope
     .envelope(ng-click='envelope.isOpen = !envelope.isOpen', ng-class="envelope.isOpen ? 'open' : '' ")
       .card
         p
-          | Hola Manuela,
+          | Hola Julio,
         p 
           | Con esta carta viene incluido un regalo que podrás reclamar solo si consiges responder acertadamente las siguientes preguntas... 
 
