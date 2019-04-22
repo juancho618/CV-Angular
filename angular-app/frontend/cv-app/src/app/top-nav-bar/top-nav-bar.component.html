@@ -1,0 +1,21 @@
+<div class="top-bar-conrainer" fxLayout="row" fxFill>
+  <div fxFlex="5" fxLayoutAlign="center center">
+    <button mat-button [matMenuTriggerFor]="menu" [ngStyle.lt-sm]="{'text-align': 'right;'}">
+      <fa-icon icon="bars"></fa-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <mat-list>
+        <mat-list-item *ngFor="let item of menuButtons" class="aside-button">
+          <fa-icon [icon]="item.icon"></fa-icon>
+          <span style="margin-left:5px;">
+            {{item.name}}
+          </span>
+        </mat-list-item>
+      </mat-list>
+    </mat-menu>
+  </div>
+  <div fxFlex="95" fxLayoutAlign="center center">
+    <span>Juan Jose Soriano Escobar</span>
+  </div>
+
+</div>

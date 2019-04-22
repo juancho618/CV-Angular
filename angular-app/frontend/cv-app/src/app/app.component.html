@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div fxLayout="row" fxLayout.lt-sm="column" fxFill>
+    <app-side-bar fxShow fxHide.lt-sm="true" fxFlex="10" fxFlex.lt-lg="15"></app-side-bar>
+    <app-top-nav-bar fxShow fxHide.gt-sm="true" fxFlex="5" ></app-top-nav-bar>
+    <div fxFlex.lt-sm="95" fxFlex.gt-sm="90" fxFlex.lt-lg="85">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

@@ -1,0 +1,24 @@
+.header-panel{
+    background-color: #263d36;
+    background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.awesomestories.com%2Fimages%2Fuser%2F1d0e6cc8d2095a0d0d699425b73d560a.JPG&f=1");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 1vw 1em;
+    text-align: center;
+}
+.header-panel h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  .container{
+    padding: 2em 1em;
+    line-height: 1.5;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }

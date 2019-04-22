@@ -1,0 +1,37 @@
+<div class="aside-column" fxLayout="column" fxFill>
+  <div fxFlex="20">
+    <img width="100%" height="100%" src="https://focustech.it/wp-content/uploads/2017/10/Cuphead-copie-vendute-4.jpg"
+      alt="photo">
+  </div>
+  <div fxFlex="5" fxLayout="column" fxLayoutAlign="center center" class="name-bar">
+    <span>
+      Juan Jose
+    </span>
+    <span>
+      Soriano Escobar
+    </span>    
+  </div>
+  <mat-list fxFlex="65">
+    <mat-list-item *ngFor="let item of menuButtons" class="aside-button">
+      <a class="menu-btn" [routerLink]="[item.action]">
+        <fa-icon [icon]="item.icon"></fa-icon>
+        <span class="menu-item">
+          {{item.name}}
+        </span>
+      </a>
+    </mat-list-item>
+  </mat-list>
+  <div fxFlex="5">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div *ngFor="let contact of footerButtons; let i = index" [ngStyle]="{'margin-left': i > 0 ? '5px;' : '0px;'}">
+        <fa-icon [icon]="['fab',contact.icon]" size="2x"></fa-icon>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="5" fxLayoutAlign="center center">
+      <span>
+          @2019
+      </span>
+        
+    </div>
+</div>
