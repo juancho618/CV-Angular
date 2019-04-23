@@ -16,6 +16,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {  faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     SideBarComponent,
     MainContainerComponent,
     TopNavBarComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
